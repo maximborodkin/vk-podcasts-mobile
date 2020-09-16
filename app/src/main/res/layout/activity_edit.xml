@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+    
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp">
+            
+            <View
+                android:id="@+id/editVisualizer"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#eeeeee"/>
+            
+            <ImageButton
+                android:id="@+id/editPlayBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editVisualizer"
+                android:layout_margin="12dp"
+                android:background="@drawable/play_button_background"/>
+                
+            <ImageButton
+                android:id="@+id/editCutBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintStart_toEndOf="@id/editPlayBtn"
+                app:layout_constraintTop_toBottomOf="@id/editVisualizer"
+                android:background="@drawable/scissors_background"
+                android:layout_margin="12dp"/>
+    
+    
+            <ImageButton
+                android:id="@+id/editUndoBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintStart_toEndOf="@id/editCutBtn"
+                app:layout_constraintTop_toBottomOf="@id/editVisualizer"
+                android:background="@drawable/undo_background"
+                android:layout_margin="12dp"/>
+    
+    
+            <ImageButton
+                android:id="@+id/editNoteBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintEnd_toStartOf="@id/editFadeInBtn"
+                app:layout_constraintTop_toBottomOf="@id/editVisualizer"
+                android:background="@drawable/note_button_background"
+                android:layout_margin="12dp"/>
+    
+            <ImageButton
+                android:id="@+id/editFadeInBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintEnd_toStartOf="@id/editFadeOutBtn"
+                app:layout_constraintTop_toBottomOf="@id/editVisualizer"
+                android:background="@drawable/fade_in_background"
+                android:layout_margin="12dp"/>
+    
+            <ImageButton
+                android:id="@+id/editFadeOutBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editVisualizer"
+                android:background="@drawable/fade_out_background"
+                android:layout_margin="12dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timecodes"
+        android:textSize="16sp"
+        android:layout_marginVertical="24dp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Add timecode"
+        app:drawableStartCompat="@drawable/add_button_background" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/timestamps_with_topic_name_make_it_easier_for_listeners_to_surf_the_podcast"/>
+</LinearLayout>

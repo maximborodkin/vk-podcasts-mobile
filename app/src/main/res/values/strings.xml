@@ -1,0 +1,19 @@
+<resources>
+  <string name="app_name">Podcasts</string>
+    <string name="add_podcast">Add podcast</string>
+    <string name="enter_podcast_name">Enter podcast name</string>
+  <string name="name">Name</string>
+    <string name="description">Description</string>
+  <string name="upload_your_podcast">Upload your podcast</string>
+  <string name="choose_audio_file_from_your_device_and_upload_it">Choose audio file from your device and upload it</string>
+  <string name="upload_file">Upload file</string>
+    <string name="non_normative_content">Non-normative content</string>
+    <string name="podcast_trailer">Podcast trailer</string>
+  <string name="exclude_from_export">Exclude from export</string>
+    <string name="next">Next</string>
+    <string name="accessibility_mode">Accessibility mode</string>
+    <string name="edit_audio">Edit audio</string>
+    <string name="this_field_is_required">This field is required</string>
+    <string name="timecodes">TIMECODES</string>
+    <string name="timestamps_with_topic_name_make_it_easier_for_listeners_to_surf_the_podcast">Timestamps with topic name. Make it easier for listeners to surf the podcast.</string>
+</resources>

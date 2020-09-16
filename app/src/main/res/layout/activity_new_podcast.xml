@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/page_padding">
+    
+        <ImageView
+            android:id="@+id/newPodcastCover"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/cover_background" />
+        
+        <TextView
+            android:id="@+id/newPodcastNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/newPodcastName"
+            app:layout_constraintTop_toTopOf="@id/newPodcastCover"
+            app:layout_constraintBottom_toTopOf="@id/newPodcastName"
+            android:text="@string/name" />
+        
+        <EditText
+            android:id="@+id/newPodcastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/enter_podcast_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/newPodcastCover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/newPodcastCover" />
+        
+        
+        <TextView
+            android:id="@+id/newPodcastDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastCover"
+            android:layout_marginVertical="12dp"
+            android:text="@string/description" />
+        
+        <EditText
+            android:id="@+id/newPodcastDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastDescriptionLabel"
+            android:background="@drawable/edittext_background"/>
+        
+        <LinearLayout
+            android:id="@+id/newPodcastUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastDescription"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/newPodcastUploadTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/upload_your_podcast"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+            
+            <TextView
+                android:id="@+id/newPodcastUploadText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/choose_audio_file_from_your_device_and_upload_it" />
+                
+            <Button
+                android:id="@+id/newPodcastUploadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/PrimaryButtonOutlined"
+                android:text="@string/upload_file"/>
+        </LinearLayout>
+    
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newPodcastChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastUpload"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+    
+            <View
+                android:id="@+id/newPodcastChangeCover"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/podcast_background"/>
+        
+            <TextView
+                android:id="@+id/newPodcastChangeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/newPodcastChangeCover"
+                app:layout_constraintTop_toTopOf="@id/newPodcastChangeCover"
+                app:layout_constraintBottom_toBottomOf="@id/newPodcastChangeCover"
+                tools:text="NameOfAudio.mp3"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp"/>
+                
+            <TextView
+                android:id="@+id/newPodcastChangeLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/newPodcastChangeName"
+                app:layout_constraintBottom_toBottomOf="@id/newPodcastChangeName"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="59:16"/>
+            
+            <TextView
+                android:id="@+id/newPodcastChangeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newPodcastChangeCover"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:text="@string/choose_audio_file_from_your_device_and_upload_it" />
+        
+            <Button
+                android:id="@+id/newPodcastChangeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newPodcastChangeText"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/PrimaryButtonOutlined"
+                android:text="@string/edit_audio"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <CheckBox
+            android:id="@+id/newPodcastNonNormativeContentCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/non_normative_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastChange"
+            android:textSize="16sp"
+            android:layout_marginVertical="4dp"/>
+        
+        <CheckBox
+            android:id="@+id/newPodcastExcludeFromExportCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exclude_from_export"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastNonNormativeContentCB"
+            android:textSize="16sp"
+            android:layout_marginVertical="4dp"/>
+        
+        <CheckBox
+            android:id="@+id/newPodcastTrailerOfPodcastCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/podcast_trailer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastExcludeFromExportCB"
+            android:textSize="16sp"
+            android:layout_marginVertical="4dp"/>
+        
+        <TextView
+            android:id="@+id/newPodcastAccessibilityLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastTrailerOfPodcastCB"
+            android:text="@string/accessibility_mode" />
+        
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/newPodcastAccessibilitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastAccessibilityLabel"
+            android:background="@null" />
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/newPodcastAccessibilitySpinner"
+            app:layout_constraintBottom_toBottomOf="@id/newPodcastAccessibilitySpinner"
+            app:layout_constraintEnd_toEndOf="@id/newPodcastAccessibilitySpinner"
+            app:srcCompat="@drawable/ic_arrow_right_18dp"/>
+        
+        <TextView
+            android:id="@+id/newPodcastAccessibilityDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastAccessibilitySpinner"
+            android:layout_margin="12dp"/>
+        
+        <Button
+            android:id="@+id/newPostNextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/PrimaryButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newPodcastAccessibilityDescription"
+            android:text="@string/next"
+            android:layout_marginTop="12dp"/>
+            
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
